@@ -675,7 +675,7 @@ class UserCmd(CkanCommand):
         user_str = 'name=%s' % user.name
         if user.name != user.display_name:
             user_str += ' display=%s' % user.display_name
-        return user_str
+        return user_str.encode('utf-8')
 
     def list(self):
         import ckan.model as model
